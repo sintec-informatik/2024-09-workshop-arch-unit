@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @NoArgsConstructor
@@ -14,11 +15,11 @@ import java.time.LocalDateTime;
 @Getter
 public class User {
     @Id
-    private String id;
+    private UUID id;
     private String name;
     private LocalDateTime creationDate;
 
-    public User(String id, String name) {
+    public User(UUID id, String name) {
         this.id = id;
         this.name = name;
         this.creationDate = LocalDateTime.now();

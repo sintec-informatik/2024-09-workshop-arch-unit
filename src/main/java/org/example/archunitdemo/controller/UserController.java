@@ -5,8 +5,8 @@ import org.example.archunitdemo.persistence.model.User;
 import org.example.archunitdemo.persistence.repository.UserRepository;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
 import java.util.Optional;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/users")
@@ -22,8 +22,8 @@ public class UserController {
 
     @PostMapping("/create")
     public void createUser(@RequestParam String newName) {
-        User user = new User(String.valueOf(Math.random()), newName);
-        user.setCreationDate(LocalDateTime.now());
+        User user = new User(UUID.randomUUID(), newName);
+//        user.setCreationDate(LocalDateTime.now());
         repository.save(user);
     }
 }

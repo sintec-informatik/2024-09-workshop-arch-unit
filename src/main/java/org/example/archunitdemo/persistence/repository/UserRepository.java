@@ -6,11 +6,12 @@ import org.springframework.stereotype.Repository;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import java.util.UUID;
 
 @Repository
 public class UserRepository {
 
-    private final Map<String, User> database = new HashMap<>();
+    private final Map<UUID, User> database = new HashMap<>();
 
     public Optional<User> findById(String id) {
         return Optional.ofNullable(database.get(id));

@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 public class NormalTests {
 
     @Test
-    void testOrderCreation() {
+    void shouldtestOrderCreation() {
         // Testcode
     }
 }

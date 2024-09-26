@@ -1,0 +1,4 @@
+#
+#Thu Sep 26 15:19:08 CEST 2024
+Layered\ architecture\ considering\ all\ dependencies,\ consisting\ of\nlayer\ 'Controller'\ ('..controller..')\nlayer\ 'Service'\ ('..service..')\nlayer\ 'Persistence'\ ('..persistence..')\nwhere\ layer\ 'Controller'\ may\ not\ be\ accessed\ by\ any\ layer\nwhere\ layer\ 'Service'\ may\ only\ be\ accessed\ by\ layers\ ['Controller']\nwhere\ layer\ 'Persistence'\ may\ only\ be\ accessed\ by\ layers\ ['Service'],\ because\ Layers\ must\ respect\ a\ defined\ dependency\ hierarchy=e5fc78ec-71cc-420e-bc1d-57c61e7aca14
+no\ classes\ that\ reside\ in\ a\ package\ '..controller..'\ should\ depend\ on\ classes\ that\ reside\ in\ any\ package\ ['..persistence..'],\ because\ controllers\ must\ use\ business\ services\ instead\ of\ the\ persistence\ layer=f64b5113-2655-4620-8018-9a0eb16491bf
